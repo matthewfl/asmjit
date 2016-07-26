@@ -3804,7 +3804,7 @@ _EmitSib:
       else {
         // [Disp32 + Index * Scale].
         mIndex &= 0x07;
-        ASMJIT_ASSERT(mIndex != kX86RegIndexSp);
+        //ASMJIT_ASSERT(mIndex != kX86RegIndexSp);
 
         uint32_t shift = rmMem->getShift();
         EMIT_BYTE(x86EncodeSib(shift, mIndex, 5));
